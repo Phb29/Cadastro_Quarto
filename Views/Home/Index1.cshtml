@@ -1,0 +1,26 @@
+﻿@model Quarto
+<style>
+    .all{
+        text-align:center;
+        margin-top:5rem;
+    }
+    .btn {
+        width:100px;
+    }
+    
+   
+</style>
+
+<div class="all">
+<div class="row">
+    <h3><strong>Seu Id De Cadastro é:</strong>@Model.QuartoId </h3>
+<h2>@Model.Nome ,@ViewBag.Obrigado!!  </h2><h2> </h2>
+
+
+</div>
+<h2> Data do Cadastro: @Model.data.AddDays(2);</h2>
+<h2><strong>Email</strong>:@Model.Email</h2>
+
+<a class="btn btn-danger" asp-action="Index" asp-controller="Home">Voltar</a>
+</div>
+

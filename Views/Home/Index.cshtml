@@ -1,0 +1,118 @@
+﻿@model Quarto
+<style>
+    h2{
+
+        text-align:center;
+    }
+     h2::after{
+
+          content: '';
+                display: block;
+                height: 0.5rem;
+                width: 25rem;
+                border-radius: 10px;
+                background-color: #6c63ff;
+                position: absolute;
+                left:37%;
+                
+     }
+    .formulario{
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+     
+      
+    }
+    .formulario input{
+        width:500px;
+        border-radius:5px;
+       
+    }
+    input{
+         display:flex;
+        align-items:center;
+        flex-direction:column;
+
+    }
+
+    .cadastrar input{
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:20px;
+        
+
+    }
+     input:focus-visible {
+                outline: 2px solid #6c63ff;
+
+    }
+    p{
+        font-size:30px;
+        
+text-align:center;
+    }
+    label{
+        font-size:20px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .container{
+        margin-top:3rem;
+    }
+</style>
+
+<div class="container">
+<h2>Cadastro De Quarto</h2>
+
+
+<form asp-action="Index" method="post"  >
+    <div class="formulario" >
+        <div >
+            <label asp-for="Nome" ></label>
+            <input asp-for="Nome" />
+            <span asp-validation-for="Nome"></span>
+        </div>
+        <div >
+            <label asp-for="Sobrenome " ></label>
+            <input asp-for="Sobrenome " />
+            <span asp-validation-for="Sobrenome "></span>
+        </div>
+        <div >
+            <label asp-for="Endereco1" ></label>
+            <input asp-for="Endereco1" />
+            <span asp-validation-for="Endereco1"></span>
+        </div>
+        <div >
+            <label asp-for="Cep" ></label>
+            <input asp-for="Cep" />
+            <span asp-validation-for="Cep"></span>
+        </div>
+         <div >
+            <label asp-for="Estado" ></label>
+            <input asp-for="Estado" />
+            <span asp-validation-for="Estado"></span>
+        </div>
+         <div >
+            <label asp-for="Cidade" ></label>
+            <input asp-for="Cidade" />
+            <span asp-validation-for="Cidade"></span>
+        </div>
+         <div >
+            <label asp-for="Telefone" ></label>
+            <input asp-for="Telefone" />
+            <span asp-validation-for="Telefone"></span>
+        </div>
+        <div >
+            <label asp-for="Email" ></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div/>
+
+        <div class="cadastrar" >
+            <input type="submit" value="Cadastrar-se" />
+
+        </div>
+
+
+</form>
+</div>
